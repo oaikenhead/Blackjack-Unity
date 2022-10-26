@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scenes/save07-deliverable.unity
+  isLoaded: 1
+  isActive: 1
