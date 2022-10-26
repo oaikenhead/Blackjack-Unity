@@ -64,7 +64,7 @@ public class PlayCards : MonoBehaviour {
 	}
 
     // gets the chips as long as player chips are above 0
-	public int GetChips() {
+    public int GetChips() {
         //return PlayerChips;
         // will not keep drawing from player chips once at zero
         if (PlayerChips > 0) {
@@ -73,7 +73,6 @@ public class PlayCards : MonoBehaviour {
         else {
             return 0;
         }
-       
 	}
 
     // checking if player chips are above zero before sending
@@ -107,8 +106,7 @@ public class PlayCards : MonoBehaviour {
             Hand[i].GetComponent<Renderer>().enabled = false;
         }
 
-		// reset Card and Hand vals
-		// reset aces list
+		// reset Card and Hand vals, aces list
         CardFlipIndex = 0;
         HandValue = 0;
         Aces = new List<Card>();

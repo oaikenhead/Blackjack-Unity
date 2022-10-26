@@ -39,23 +39,12 @@ public class Deck : MonoBehaviour {
     public void ShuffleDeck() {
         // swapping array positions as we are taking one off the length and decrementing as we move through the deck
         for (int i=Cards.Length-1; i>0; --i) {
-            // swap var j is set to a random float int
-            // using floor to in, float is turned into an integer
-            // the random number is multipled by length minus card back
             int j = Mathf.FloorToInt(Random.Range(0.0f, 1.0f) * Cards.Length-1) + 1;
-
-            // a sprite is created for the card face and set to where we are in the loop at i
             Sprite face = Cards[i];
-            // swap card i with random card j (created above)
             Cards[i] = Cards[j];
-            // random card j is now sent to the front of the deck
             Cards[j] = face;
-
-            // a new card value is assigned with card weight i
             int NewCardValue = CardWeight[i];
-            // card weight of i is set to card weight of j
             CardWeight[i] = CardWeight[j];
-            // random card j weight is now assigned the new value
             CardWeight[j] = NewCardValue;
         }
         // set the card index back to 1
